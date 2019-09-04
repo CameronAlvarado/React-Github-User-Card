@@ -14,12 +14,11 @@ class CardList extends React.Component  {
 render() {
     return (
         <section>
-            <h2>Cardlist Component</h2>
             <Container text>
                 <Grid relaxed columns={2} divided="vertically">
                     <Grid.Row padded="vertically" columns={2}>
                         {this.props.userArray.map(user => {
-                                console.log(user);
+                                // console.log(user);
                                 return (
                                 <UserCard userArray={user} />
                                 );
