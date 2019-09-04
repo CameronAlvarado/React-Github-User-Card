@@ -1,7 +1,9 @@
 .App {
   text-align: center;
-  text-shadow: 0px 0px 10px grey;
-  margin: 10px;
+  text-shadow: 0px 0px 5px lightgrey;
+  padding: 10px;
+  background: rgb(99,99,99);
+  background: linear-gradient(90deg, rgba(99,99,99,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 80%, rgba(99,99,99,1) 100%);
 }
 
 .App-logo {
