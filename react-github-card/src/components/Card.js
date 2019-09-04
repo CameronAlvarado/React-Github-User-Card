@@ -6,11 +6,6 @@ import 'semantic-ui-css/semantic.min.css';
 
 class UserCard extends React.Component  {
 
-  constructor() {
-    super();
-    this.state = {}
-  }
-
   render() {
     return (
         <Grid.Column>

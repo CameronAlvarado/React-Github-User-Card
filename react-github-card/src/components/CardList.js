@@ -6,11 +6,6 @@ import UserCard from "./Card";
 
 class CardList extends React.Component  {
 
-    constructor() {
-        super();
-        this.state = {}
-      }
-
 render() {
     return (
         <section>
