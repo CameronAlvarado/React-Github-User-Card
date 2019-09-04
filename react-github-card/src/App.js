@@ -11,7 +11,8 @@ class App extends React.Component  {
       users: [],
       loginArray: []
     }
-    console.log(this.state.loginArray)
+    // console.log(this.state.loginArray);
+    // console.log(this.state.users);
   }
 
   componentDidMount() {
@@ -19,19 +20,25 @@ class App extends React.Component  {
     axios.get(URL)
       .then(response => {
         console.log(response.data);
-        this.setState({
-          users: response.data
-        })
-        console.log(this.state.users)
+         let newArray =[];
+        response.data.forEach( (element) => {
+         newArray.push(element.login);        
+        });
+        // this loops through the new array and plugs the logins into the url.
+          newArray.forEach(username => {
+              axios.get([`https://api.github.com/users/${username}`])
+              .then( (response) => {
+                // console.log(response.data);
+                this.setState({
+                  users: [...this.state.users, response.data]
+                })
+                console.log(this.state.users);
+              })
+              .catch( (err) => {
+                console.log(err);
+              });
+          });
       })
-      .catch(err => console.log('error'));
-      axios.get(`https://api.github.com/users/${this.state.users}`)
-      .then(response => {
-        this.setState({
-          loginArray: response.data
-        })
-      })
-      .catch(err => console.log("noooo"));
     };
 
   render() {
