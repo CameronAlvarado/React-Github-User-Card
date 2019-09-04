@@ -9,9 +9,7 @@ class App extends React.Component  {
     super();
     this.state = {
       users: [],
-      loginArray: []
     }
-    // console.log(this.state.loginArray);
     // console.log(this.state.users);
   }
 

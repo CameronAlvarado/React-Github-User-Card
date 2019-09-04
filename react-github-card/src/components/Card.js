@@ -14,7 +14,7 @@ class UserCard extends React.Component  {
   render() {
     return (
         <Grid.Column>
-            <Card color='orange'>
+            <Card color='light green'>
                 <Image src={this.props.userArray.avatar_url} size='medium' />
                 <Card.Content>
                     <Card.Header>
